@@ -1,7 +1,7 @@
 Prerequisites
 
 * Download the two csv files(‘tmdb_5000_credits.csv’ and ‘tmdb_5000_movies.csv’) provided in the zip file in the same folder as that of recsystem.py
-The path in the python code file for these csv files is mentioned as Downloads/file_name
+The path in the python code file for these csv files is mentioned as Downloads/file_name. Update it if needed.
 Dataset link : https://www.kaggle.com/datasets/abdelrhamanfakhry/movies-data-for-ml-dl-recommendation-system
 
 * Have python installed in the system or use jupyter lab instead for easy navigation
