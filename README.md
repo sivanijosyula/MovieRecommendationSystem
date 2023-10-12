@@ -16,7 +16,8 @@
 
 * Steps for execution:
 
-    Run the command  - streamlit run recsystem.py
+    Run the command
+      streamlit run recsystem.py
   
     If the terminal is not opened in the same path as the python file, please include the full path of the file in the command.
     Example - streamlit run Downloads/recsystem.py
