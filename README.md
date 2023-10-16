@@ -8,15 +8,13 @@
 
 The cosine similarity between two vectors, A and B, is calculated as follows:
 
-  Cosine Similarity(A,B)= A⋅B / ∥A∥⋅∥B∥
+  Cosine Similarity(A,B)= $\frac{A.B}{∥A∥⋅∥B∥}$
 
 where,
 
-A⋅B represents the dot product of vectors A and B.
+$A⋅B$ represents the dot product of vectors $A$ and $B$.
 
-∥A∥ and ∥B∥ are the magnitudes of the vectors A and B.
-
-
+$∥A∥$ and $∥B∥$ are the magnitudes of the vectors $A$ and $B$.
 
 
 **Steps for execution:**
@@ -29,21 +27,22 @@ A⋅B represents the dot product of vectors A and B.
   
     https://www.kaggle.com/datasets/abdelrhamanfakhry/movies-data-for-ml-dl-recommendation-system
 
-* Have Python installed in the system or use Jupyter Lab instead for easy navigation
+* Have Python installed in the system. We recommend using Jupyter Lab(Anaconda).
 
-* Install streamlit using the command - " pip install streamlit "
+* Install streamlit using the command - ```pip install streamlit```
   
     Documentation for reference: https://docs.streamlit.io/
 
 * Run the command -
 
-  streamlit run recsystem.py
+  ```streamlit run recsystem.py```
   
-* If the terminal is not opened in the same path as the python file, please include the full path of the file in the command.
+* If the terminal is not opened in the same path as the Python file, please include the full path of the file in the command.
 
     Example - streamlit run Downloads/recsystem.py
+  
 
-​
+**Preview of the application home screen**
+<img width="1440" alt="image" src="https://github.com/sivanijosyula/MovieRecommendationSystem/assets/119761687/a36feba7-18cd-412c-9eb0-e299981084a7">
 
 
- 
