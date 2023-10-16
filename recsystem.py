@@ -7,8 +7,8 @@ from collections import Counter
 
 st.title("Movie recommendations system")
 
-movies = pd.read_csv('Downloads/tmdb_5000_movies.csv')
-credits = pd.read_csv('Downloads/tmdb_5000_credits.csv')
+movies = pd.read_csv('tmdb_5000_movies.csv')
+credits = pd.read_csv('tmdb_5000_credits.csv')
 
 movies = movies.rename(columns={"id": "movie_id"})
 df1 = pd.merge(movies, credits, on="movie_id")
@@ -25,7 +25,7 @@ data['cast'] = data['cast'].astype(str)
 data['crew'] = data['crew'].astype(str)
 data['keywords'] = data['keywords'].astype(str)
 
-termfreq_desc = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+termfreq_desc = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0.0, stop_words='english')
 freq_matrix_desc = termfreq_desc.fit_transform(data['overview'])
 model_desc = linear_kernel(freq_matrix_desc, freq_matrix_desc)
 
@@ -37,7 +37,7 @@ def desc_recommendations(title):
     movind = [i[0] for i in srec]
     return data['title_x'].iloc[movind]
 
-termfreq_gen = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+termfreq_gen = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0.0, stop_words='english')
 freq_matrix_gen = termfreq_gen.fit_transform(data['genres'])
 model_gen = linear_kernel(freq_matrix_gen, freq_matrix_gen)
 
@@ -49,7 +49,7 @@ def gen_recommendations(title):
     movind = [i[0] for i in srec]
     return data['title_x'].iloc[movind]
 
-termfreq_cast = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+termfreq_cast = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0.0, stop_words='english')
 freq_matrix_cast = termfreq_cast.fit_transform(data['cast'])
 model_cast = linear_kernel(freq_matrix_cast, freq_matrix_cast)
 
@@ -61,7 +61,7 @@ def cast_recommendations(title):
     movind = [i[0] for i in srec]
     return data['title_x'].iloc[movind]
 
-termfreq_crew = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+termfreq_crew = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0.0, stop_words='english')
 freq_matrix_crew = termfreq_crew.fit_transform(data['crew'])
 model_crew = linear_kernel(freq_matrix_crew, freq_matrix_crew)
 
@@ -73,7 +73,7 @@ def crew_recommendations(title):
     movind = [i[0] for i in srec]
     return data['title_x'].iloc[movind]
 
-termfreq_kwords = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+termfreq_kwords = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0.0, stop_words='english')
 freq_matrix_kwords = termfreq_kwords.fit_transform(data['keywords'])
 model_kwords = linear_kernel(freq_matrix_kwords, freq_matrix_kwords)
 
