@@ -1,6 +1,6 @@
 **Movie Recommendations System**
 
-***Collaborative-based recommendation system***: A family of algorithms known as collaborative filtering offers numerous methods for locating comparable users or things as well as numerous methods for determining ratings based on the ratings of comparable users. Depending on their decisions, you end up choosing a collaborative filtering strategy.
+***Collaborative recommendation system***: A family of algorithms known as collaborative filtering offers numerous methods for locating comparable users or things as well as numerous methods for determining ratings based on the ratings of comparable users. Depending on their decisions, you end up choosing a collaborative filtering strategy.
 
 ***Content-based recommendation system***: Recommending movies based on the content, title, genre, director, movie description, and a few other features. This type of recommendation system works on the premise that if a person enjoyed one movie, they could also enjoy one that is similar to it. This project implements a Content-based recommendation system.
 
